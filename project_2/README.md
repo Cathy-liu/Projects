@@ -32,89 +32,89 @@ There are 3 datasets included in the [`datasets`](./datasets/) project for Ames 
 ### Data Dictionary
 The data has 81 columns which include 23 nominal, 23 ordinal, 14 discrete, and 20 continuous variables (and 1 additional observation identifiers). The test dataset have same data dictionary as train dataset except SalePrice. 
 
- #   Column             Type            Description 
----  ------             -----           -------------
- 0   Id                 integer         Identification number
- 1   PID                integer         Parcel identification number
- 2   MS SubClass        integer         Identifies the type of dwelling involved in the sale
- 3   MS Zoning          object          Identifies the general zoning classification of the sale
- 4   Lot Frontage       float           Linear feet of street connected to property
- 5   Lot Area           integer         Lot size in square feet
- 6   Street             object          Type of road access to property
- 7   Alley              object          Type of alley access to property
- 8   Lot Shape          object          General shape of property
- 9   Land Contour       object          Flatness of the property
- 10  Utilities          object          Type of utilities available
- 11  Lot Config         object          Lot configuration
- 12  Land Slope         object          Slope of property
- 13  Neighborhood       object          Physical locations within Ames city limits
- 14  Condition 1        object          Proximity to various conditions
- 15  Condition 2        object          Proximity to various conditions (if more than one is present)
- 16  Bldg Type          object          Type of dwelling
- 17  House Style        object          Style of dwelling
- 18  Overall Qual       integer         Rates the overall material and finish of the house
- 19  Overall Cond       integer         Rates the overall condition of the house
- 20  Year Built         integer         Original construction date
- 21  Year Remod/Add     integer         Remodel date (same as construction date if no remodeling or additions) 
- 22  Roof Style         object          Type of roof
- 23  Roof Matl          object          Roof material
- 24  Exterior 1st       object          Exterior covering on house
- 25  Exterior 2nd       object          Exterior covering on house (if more than one material)
- 26  Mas Vnr Type       object          Masonry veneer type
- 27  Mas Vnr Area       float           Masonry veneer area in square feet
- 28  Exter Qual         object          Evaluates the quality of the material on the exterior
- 29  Exter Cond         object          Evaluates the present condition of the material on the exterior
- 30  Foundation         object          Type of foundation
- 31  Bsmt Qual          object          Evaluates the height of the basement
- 32  Bsmt Cond          object          Evaluates the general condition of the basement
- 33  Bsmt Exposure      object          Refers to walkout or garden level walls
- 34  BsmtFin Type 1     object          Rating of basement finished area
- 35  BsmtFin SF 1       float           Type 1 finished square feet
- 36  BsmtFin Type 2     object          Rating of basement finished area (if multiple types)
- 37  BsmtFin SF 2       float           Type 2 finished square feet
- 38  Bsmt Unf SF        float           Unfinished square feet of basement area
- 39  Total Bsmt SF      float           Total square feet of basement area
- 40  Heating            object          Type of heating
- 41  Heating QC         object          Heating quality and condition
- 42  Central Air        object          Central air conditioning
- 43  Electrical         object          Electrical system
- 44  1st Flr SF         integer         First Floor square feet
- 45  2nd Flr SF         integer         Second floor square feet
- 46  Low Qual Fin SF    integer         Low quality finished square feet (all floors)
- 47  Gr Liv Area        integer         Above grade (ground) living area square feet
- 48  Bsmt Full Bath     float           Basement full bathrooms
- 49  Bsmt Half Bath     float           Basement half bathrooms
- 50  Full Bath          integer         Full bathrooms above grade
- 51  Half Bath          integer         Half baths above grade
- 52  Bedroom AbvGr      integer         Bedrooms above grade (does NOT include basement bedrooms)
- 53  Kitchen AbvGr      integer         Kitchens above grade
- 54  Kitchen Qual       object          Kitchen quality
- 55  TotRms AbvGrd      integer         Total rooms above grade (does not include bathrooms)
- 56  Functional         object          Home functionality (Assume typical unless deductions are warranted)
- 57  Fireplaces         integer         Number of fireplaces
- 58  Fireplace Qu       object          Fireplace quality
- 59  Garage Type        object          Garage location
- 60  Garage Yr Blt      float           Year garage was built
- 61  Garage Finish      object          Interior finish of the garage
- 62  Garage Cars        float           Size of garage in car capacity
- 63  Garage Area        float           Size of garage in square feet
- 64  Garage Qual        object          Garage quality
- 65  Garage Cond        object          Garage condition
- 66  Paved Drive        object          Paved driveway
- 67  Wood Deck SF       integer         Wood deck area in square feet
- 68  Open Porch SF      integer         Open porch area in square feet
- 69  Enclosed Porch     integer         Enclosed porch area in square feet
- 70  3Ssn Porch         integer         Three season porch area in square feet
- 71  Screen Porch       integer         Screen porch area in square feet
- 72  Pool Area          integer         Pool area in square feet
- 73  Pool QC            object          Pool quality
- 74  Fence              object          Fence quality
- 75  Misc Feature       object          Miscellaneous feature not covered in other categories
- 76  Misc Val           integer         Value of miscellaneous feature
- 77  Mo Sold            integer         Month Sold (MM)
- 78  Yr Sold            integer         Year Sold (YYYY)
- 79  Sale Type          object          Condition of sale
- 80  SalePrice          integer         Condition of sale
+|Column|Type|Description|
+|---|---|---|---|
+|**Id**|*integer*|Identification number|
+|**PID**|*integer*|Parcel identification number|
+|**MS SubClass**|*integer*|Identifies the type of dwelling involved in the sale|
+|**MS Zoning**|*object*|Identifies the general zoning classification of the sale|
+|**Lot Frontage**|*float*|Linear feet of street connected to property|
+|**Lot Area**|*integer*|Lot size in square feet|
+|**Street**|*object*|Type of road access to property|
+|**Alley**|*object*|Type of alley access to property|
+|**Lot Shape**|*object*|General shape of property|
+|**Land Contour**|*object*|Flatness of the property|
+|**Utilities**|*object*|Type of utilities available|
+|**Lot Config**|*object*|Lot configuration|
+|**Land Slope**|*object*|Slope of property|
+|**Neighborhood**|*object*|Physical locations within Ames city limits|
+|**Condition 1**|*object*|Proximity to various conditions|
+|**Condition 2**|*object*|Proximity to various conditions (if more than one is present)|
+|**Bldg Type**|* object*|Type of dwelling|
+|**House Style**|*object*|Style of dwelling|
+|**Overall Qual**|*integer*|Rates the overall material and finish of the house|
+|**Overall Cond**|*integer*|Rates the overall condition of the house|
+|**Year Built**|*integer*|Original construction date|
+|**Year Remod/Add**|*integer*|Remodel date (same as construction date if no remodeling or additions)| 
+|**Roof Style**|*object*|Type of roof|
+|**Roof Matl**|*object*|Roof material|
+|**Exterior 1st**|*object*|Exterior covering on house|
+|**Exterior 2nd**|*object*|Exterior covering on house (if more than one material)|
+|**Mas Vnr Type**|*object*|Masonry veneer type|
+|**Mas Vnr Area**|*float*|Masonry veneer area in square feet|
+|**Exter Qual**|*object*|Evaluates the quality of the material on the exterior|
+|**Exter Cond**|*object*|Evaluates the present condition of the material on the exterior|
+|**Foundation**|*object*|Type of foundation|
+|**Bsmt Qual**|*object*|Evaluates the height of the basement|
+|**Bsmt Cond**|*object*|Evaluates the general condition of the basement|
+|**Bsmt Exposure**|*object*|Refers to walkout or garden level walls|
+|**BsmtFin Type 1**|*object*|Rating of basement finished area|
+|**BsmtFin SF 1**|*float*|Type 1 finished square feet|
+|**BsmtFin Type 2**|*object*|Rating of basement finished area (if multiple types)|
+|**BsmtFin SF 2**|*float*|Type 2 finished square feet|
+|**Bsmt Unf SF**|*float*|Unfinished square feet of basement area|
+|**Total Bsmt SF**|*float*|Total square feet of basement area|
+|**Heating**|*object*|Type of heating|
+|**Heating QC**|*object*|Heating quality and condition|
+|**Central Air**|*object*|Central air conditioning|
+|**Electrical**|*object*|Electrical system|
+|**1st Flr SF**|*integer*|First Floor square feet|
+|**2nd Flr SF**|*integer*|Second floor square feet|
+|**Low Qual Fin SF**|*integer*|Low quality finished square feet (all floors)|
+|**Gr Liv Area**|*integer*|Above grade (ground) living area square feet|
+|**Bsmt Full Bath**|*float*|Basement full bathrooms|
+|**Bsmt Half Bath**|*float*|Basement half bathrooms|
+|**Full Bath**|*integer*|Full bathrooms above grade|
+|**Half Bath**|*integer*|Half baths above grade|
+|**Bedroom AbvGr**|*integer*|Bedrooms above grade (does NOT include basement bedrooms)|
+|**Kitchen AbvGr**|*integer*|Kitchens above grade|
+|**Kitchen Qual**|*object*|Kitchen quality|
+|**TotRms AbvGrd**|*integer*|Total rooms above grade (does not include bathrooms)|
+|**Functional**|*object*|Home functionality (Assume typical unless deductions are warranted)|
+|**Fireplaces**|*integer*|Number of fireplaces|
+|**Fireplace Qu**|* object*|Fireplace quality|
+|**Garage Type**|*object*|Garage location|
+|**Garage Yr Blt**|*float*|Year garage was built|
+|**Garage Finish**|*object*|Interior finish of the garage|
+|**Garage Cars**|*float*|Size of garage in car capacity|
+|**Garage Area**|*float*|Size of garage in square feet|
+|**Garage Qual**|*object*|Garage quality|
+|**Garage Cond**|*object*|Garage condition|
+|**Paved Drive**|*object*|Paved driveway|
+|**Wood Deck SF**|*integer*|Wood deck area in square feet|
+|**Open Porch SF**|*integer*|Open porch area in square feet|
+|**Enclosed Porch**|*integer*|Enclosed porch area in square feet|
+|**3Ssn Porch**|*integer*|Three season porch area in square feet|
+|**Screen Porch**|*integer*|Screen porch area in square feet|
+|**Pool Area**|*integer*|Pool area in square feet|
+|**Pool QC**|*object*|Pool quality|
+|**Fence**|*object*|Fence quality|
+|**Misc Feature**|*object*|Miscellaneous feature not covered in other categories|
+|**Misc Val**|*integer*|Value of miscellaneous feature|
+|**Mo Sold**|*integer*|Month Sold (MM)|
+|**Yr Sold**|*integer*|Year Sold (YYYY)|
+|**Sale Type**|*object*|Condition of sale|
+|**SalePrice**|*integer*|Condition of sale|
 
 
 ## Exploratory Data Analysis & Visualisation
