@@ -33,7 +33,7 @@ There are 3 datasets included in the [`datasets`](./datasets/) project for Ames 
 The data has 81 columns which include 23 nominal, 23 ordinal, 14 discrete, and 20 continuous variables (and 1 additional observation identifiers). The test dataset have same data dictionary as train dataset except SalePrice. 
 
 |Column|Type|Description|
-|---|---|---|---|
+|---|---|---|
 |**Id**|*integer*|Identification number|
 |**PID**|*integer*|Parcel identification number|
 |**MS SubClass**|*integer*|Identifies the type of dwelling involved in the sale|
