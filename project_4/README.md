@@ -189,5 +189,6 @@ Through this project, we gained many useful insights about the mosquito populati
 
 The production model which we ended up with was one using the Gradient Boosting algorithm. It has a high AUC score and a Recall Score. We did not compare the accuracy of this model to the baseline prediction since the data was heavily imbalanced in the first place (>95% of one class). The imbalances were dealt with using the SMOTE technique.
 
+Future work: include longer period of spray data in the modeling; include geospatial info in spray data; reduce percentage of class 0
 
 
