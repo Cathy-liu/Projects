@@ -1,181 +1,81 @@
 # Project 2 - Ames Housing Data and Kaggle Challenge
 
-Welcome to Project 2! It's time to start modeling.
+**Summary of the project**
+The goal of this project is to train a regression model for predicting housing price on the given data. Metrics are applied to assess the performance of each model; and for the best performing model selected, hyperparameter tuning is carried out to ensure the production model are set with the best set of parameters. After obtaining the production model, analysis of the model coefficients is carried out to highlight the strongest features in predicting the response variable which is the salesprice of a house. Based on this, business insights are given for stakeholders in the real estate business. 
 
-**Primary Learning Objectives:**
-1. Creating and iteratively refining a regression model
-2. Using [Kaggle](https://www.kaggle.com/) to practice the modeling process
-3. Providing business insights through reporting and presentation.
-
-You are tasked with creating a regression model based on the Ames Housing Dataset. This model will predict the price of a house at sale.
-
-The Ames Housing Dataset is an exceptionally detailed and robust dataset with over 70 columns of different features relating to houses.
-
-Secondly, we are hosting a competition on Kaggle to give you the opportunity to practice the following skills:
-
-- Refining models over time
-- Use of train-test split, cross-validation, and data with unknown values for the target to simulate the modeling process
-- The use of Kaggle as a place to practice data science
-
-As always, you will be submitting a technical report and a presentation. **You may find that the best model for Kaggle is not the best model to address your data science problem.**
-
-## Set-up
-
-Before you begin working on this project, please do the following:
-
-1. Sign up for an account on [Kaggle](https://www.kaggle.com/)
-2. **IMPORTANT**: Click this link ([Regression Challenge Sign Up](https://www.kaggle.com/t/2dde5663e03b4165b853ff65e723c26d)) to **join** the competition (otherwise you will not be able to make submissions!)
-3. Review the material and download data files on the [DSI-US-11 Regression Challenge](https://www.kaggle.com/c/dsi-us-11-project-2-regression-challenge)
-4. Review the [data description](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
-
-## The Modeling Process
-
-1. The train dataset has all of the columns that you will need to generate and refine your models. The test dataset has all of those columns except for the target that you are trying to predict in your Regression model.
-2. Generate your regression model using the training data. We expect that within this process, you'll be making use of:
-    - train-test split
-    - cross-validation / grid searching for hyperparameters
-    - strong exploratory data analysis to question correlation and relationship across predictive variables
-    - code that reproducibly and consistently applies feature transformation (such as the preprocessing library)
-3. Predict the values for your target column in the test dataset and consider submitting your predictions to Kaggle to see how your model does against unknown data.
-    - **Note**: Kaggle expects to see your submissions in a specific format. Check the challenge's page to make sure you are formatting your CSVs correctly!
-    - **You are limited to models you've learned in class so far**. In other words, you cannot use XGBoost, Neural Networks or any other advanced model for this project.
-4. Evaluate your models!
-    - consider your evaluation metrics
-    - consider your baseline score
-    - how can your model be used for inference?
-    - why do you believe your model will generalize to new data?
-
-## Submission
-
-Materials must be submitted by the beginning of class on **11 Dec 2021 9AM** through a link to a **public** repository on your personal (not GA) GitHub.
-
-Your technical report will be hosted on your **personal GitHub** (not **git.generalassemb.ly**). Make sure it includes:
-
-- A README.md (that isn't this file)
-- Jupyter notebook(s) with your analysis and models (renamed to describe your project)
-- At least one successful prediction submission on [DSI-US-11 Regression Challenge](https://www.kaggle.com/c/dsi-us-11-project-2-regression-challenge) --  you should see your name in the "[Leaderboard](https://www.kaggle.com/c/dsi-us-11-project-2-regression-challenge/leaderboard)" tab.
-- Data files
-- Presentation slides
-- Any other necessary files (images, etc.)
-
----
-
-## Presentation Structure
-
-- **Presentation Time: 15 minutes**
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider the audience. Assume you are presenting to a non-technical audience (real estate agents, property owners, etc.).
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level, **CODE IS ALWAYS INAPPROPRIATE FOR A NON-TECHNICAL AUDIENCE**).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
-
-Be sure to rehearse and time your presentation before class.
-
----
-
-## Rubric
-Teaching team will evaluate your project using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
-
-**Note:** Presentation will be done as a group while codes will be prepared and submitted by each student.
-
-**Scores will be out of 27 points based on the 9 items in the rubric.** <br>
-*3 points per section*<br>
-
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
-
-### The Data Science Process
 
 **Problem Statement**
-- Is it clear what the student plans to do?
-- What type of model will be developed?
-- How will success be evaluated?
-- Is the scope of the project appropriate?
-- Is it clear who cares about this or why this is important to investigate?
-- Does the student consider the audience and the primary and secondary stakeholders?
+- What are the top 10 strongest features in deciding the price of a house?
+- Among the top strongest features, which are more common sense factors and which are not? 
+- Based on the findings to the previous question, what business insights can be made?
 
-**Data Cleaning and EDA**
-- Are missing values imputed appropriately?
-- Are distributions examined and described?
-- Are outliers identified and addressed?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-- Does the student address whether or not they are likely to be able to answer their problem statement with the provided data given what they've discovered during EDA?
+**Structure of coding** 
+There are 6 parts of coding, below is a summary of the process in each. 
 
-**Preprocessing and Modeling**
-- Are categorical variables one-hot encoded?
-- Does the student investigate or manufacture features with linear relationships to the target?
-- Have the data been scaled appropriately?
-- Does the student properly split and/or sample the data for validation/training purposes?
-- Does the student utilize feature selection to remove noisy or multi-collinear features?
-- Does the student test and evaluate a variety of models to identify a production algorithm (**AT MINIMUM:** linear regression, lasso, and ridge)?
-- Does the student defend their choice of production model relevant to the data at hand and the problem?
-- Does the student explain how the model works and evaluate its performance successes/downfalls?
+***1. Data Cleaning and EDA***
+- From reading the data dictionary at https://www.kaggle.com/c/dsir-426-ames-housing-data, there are 14 columns in the training dataset that 'NA' have actual meanings. In order to differentiate these 'NA' cells that actually have meangings from real absent data, a placeholder string is filled for the NA value in these 14 columns. 
 
-**Evaluation and Conceptual Understanding**
-- Does the student accurately identify and explain the baseline score?
-- Does the student select and use metrics relevant to the problem objective?
-- Is more than one metric utilized in order to better assess performance?
-- Does the student interpret the results of their model for purposes of inference?
-- Is domain knowledge demonstrated when interpreting results?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
+- Upon inspection all the other NA values are real missing data and are imputed using most-frequent values for that feature.
 
-**Conclusion and Recommendations**
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
-- Does the conclusion answer the original problem statement?
-- Does the student address how findings of this research can be applied for the benefit of stakeholders?
-- Are future steps to move the project forward identified?
+- A correlation function was used to find the top 5 strongest features. Since there are both categorical and numerical features among them, to visualize their correlation with the resopnse variable, scatterplots are used to visualize numerical feature vs salesprice correlation, whereas boxplots are used to visualize distributions of the categorical features. 
 
-### Organization and Professionalism
+- From the visualization, the features 'Overall Qual', 'Gr Liv Area','Garage Area' show strong positive correlation with the salesprice, which is understandable. The other two 'Total Bsmt SF' and 'Garage Cars' may have positively correlated to the salesprice due to the fact that larger garage and basement area in this context suggest a larger house which means higher price.
 
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
+***2. Preprocessing and Modeling***
+- Train/Test split is done before imputing for the 'Lot Frontage' and 'Garage Yr Blt' columns to avoid data leakage. The split portion is 80% - 20%. 
 
-**Visualizations**
-- Are sufficient visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Are plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
+- Before dummifying the categorical features, all 'object' type columns are inspected to be sure that they should be categorical, and not numerical values with strings among the values. 
 
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Are `sklearn` methods used appropriately?
+- All the 'object' type columns are all dummified into binary values.
 
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
+- There are categorical features that are originally in float/int format, these are ordinal features for which the numerical values are actually meaningful, for this reason they are left with their origianl numerical values. 
 
-In order to pass the project, students must earn a minimum score of 1 for each category.
-- Earning below a 1 in one or more of the above categories would result in a failing project.
-- While a minimum of 1 in each category is the required threshold for graduation, students should aim to earn at least an average of 1.5 across each category. An average score below 1.5, while it may be passing, means students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
+- As the number of columns for the training and testing datasets have differed after dummification, an outer join operation have been carried out on both of them to include the columns from the other dataset. This is to make sure the regression model trained on the training dataset can perform normally on the testing dataset.
 
-### REMEMBER:
+- Finally, StandardScaler transformation is performed on the feature matrix on training dataset, and the same transformation is subsequently performed on the test dataset.
 
-This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+***3. Model Benchmarks***
+- The null model using the mean value of saleprice is taken as the baseline model. 
+
+- For OLS model, based on the metrics, the R^2 is 0.95 on the training data and negative on the testing dataset, this says that the OLS model here is a severely overfit model, and it does not explain any of the variations in y by X for the testing dataset.
+
+- For RidgeCV model, the range for alphas as input parameter is chosen based on parametric experiments, in a way such that convergence is guranteed for the Ridge model and also covers the range where the optimal alpha value falls in.
+- The results of the RidgeCV model suggests that though the R^2 on the training dataset is quite ok, the 0.77 value on the test dataset suggests that this model is quite a overfit model, and may not generalize well to new data.
+
+- For the LassoCV regression model, from parametric experiments, alpha=10^2.1 is the smallest alpha value that gurantees convergence. Hence the range of list of alphas input here is chosen such that it covers the optimal alpha value and approximates it more and mroe through iterations.
+- The R^2 is 0.904 and 0.884 on the training and testing datasets respectively; the closeness between the R^2 on training dataset and on test dataset suggests that this model is well balanced and generalizes well to new data.
+
+***4. Model Tuning***
+- As Lasso regression model perform the best for the problem as suggests by its metrics and also because of the large number of features in the problem, hyperparameter tuning is carried out for the Lasso Regression Model.
+
+- When defining the search grid, for each iteration, focus is on shrinking the range of alphas so that through iterations, we will have zoomed in to obtained a more exact approximate to the optimal value of alpha.
+
+- The R^2 values have virtually fixed around a point for the last four iterations as presented in the code Part 4, this suggests that the we have reached the optimal alpha value and the model is saturated here. 
+
+- The closeness between the R^2 on training (0.9045) and test datasets (0.8835) confirmed that the model performs well and generalizes well too.
+
+***5. Production Model and Insights***
+- Based on the parametric experiments in Part 3 and the hyperparameter tuning results in Part 4, we can safely conclude that the LassoCV model with alpha at 920.37 is the model that performs the best and generalizes the best; hence this is the model adopted as the production model.
+
+- Top 10 features are identified by the 10 highest coefficients from the trained Lasso model. There are common sense ones such as area and year built, and there are also not so common sense ones such as a specific neighborhood.
+
+- Interpretation of the coefficients for the top 5 strongest features: 
+
+With all the other factors hold constant,
+
+* Per square feet increase in above ground living area will lead to an increase of $45.73 in price on average;
+
+* Every level upgrade in the overall quality scale will lead to an increase of $11,133 in prices on average;
+
+* Prices of houses in the neighborhood of Northridge Heights are $38,111 higher than that of houses in the neighborhood of Bloomington Heights;
+
+* Each year more recently built contribute to a $219 raise in the price on averge;
+
+* Houses with a second garage are $100,062 more expensive than houses with an elevator on average (probably because they are highrise apartments that are smaller than houses with 2 garages).
+
+- As most other features are kind of universal (e.g. total area), the feature neighorhood is further looked into here for the purpose to gain business insights. The top 3 most valuable neighorhoods are identified based on the mean salesprice in each neighorhoods.
+
+***6. Predictin and Kaggel Submission*** 
+- For the data imported from the test.csv file, the same cleaning and pre-processing, feature engineering steps are carried out. 
+- After dummification, as there are columns that don't exist in the dummified feature matrix of the data from the train.csv file, these columns are dropped as we do not have any information how they are going to affect the response variable. On the other hand, those few columns that exist in the feature matrix of the data from the train.csv file but absent in this dataset, they are filled up with 0 values to the feature matrix, to keep the columns of the feature matrix exactly the same as the model trained on.
+- After obtaining the predicted salesprice using the Prodcution Model, mean predicted salesprice of houses in each neighborhood are plotted to highlight the most valuable neighborhoods in real estate market - NoRidge, NridgHt and StoneBr.
